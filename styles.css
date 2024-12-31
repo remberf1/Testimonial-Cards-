@@ -109,7 +109,7 @@ html,body{
     display: flex;
     flex: 1;
     gap: 20px;
-    
+
 }
 .testimonial-review{
     color: white;
@@ -134,48 +134,80 @@ html,body{
     color: #444;
     margin-bottom: 7px;
   }
-  
+  .testimonial-card-4{
+    outline: 1px solid #000; ;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    flex: 1 ;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+    max-width: 900px;
+  }
+  .slider-quote{
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+
+  }
 .scroll-images-container{
+  width: 100%;
     display: flex;
     gap:10px;
     justify-content: center;
+    text-align: center;
+    margin: auto;
+    position: relative;
 }
-.scroll-images{
+.center-scroll-image{
     border-radius: 70px;
     height: 60px;
     width: 60px;
     object-fit: cover;
+    align-items: center;
 }
-@media (max-width: 850px) {
-    .textbox {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .textbox::after {
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-width: 8px;
-        content: '';
-        right: 100%;
-        top:130px;
-        width: 0;
-        height: 0;
-        position: absolute;
-        box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px ;
-        transform: rotate(45deg);
-        bottom: 0;
-        left: 20px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: transparent black black transparent; 
-    }
+.scroll-images{
+  position: relative;
+    top:10px;
+    border-radius: 70px;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.7;
 }
+
 .prev::before {
     content: '❮';
   }
   
   .next::before {
     content: '❯';
+  }
+.prev,
+.next {
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
   }
